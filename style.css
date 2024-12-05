@@ -1,0 +1,98 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #00416A, #E4E5E6);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 400px;
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.output {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  word-wrap: break-word;
+  word-break: break-all;
+  min-height: 100px;
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
+
+button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.operator {
+  background-color: rgba(255, 165, 0, 0.5);
+}
+
+.operator:hover {
+  background-color: rgba(255, 165, 0, 0.7);
+}
+
+.equals {
+  background-color: rgba(0, 255, 127, 0.5);
+}
+
+.equals:hover {
+  background-color: rgba(0, 255, 127, 0.7);
+}
+
+.clear, .delete {
+  background-color: rgba(255, 99, 71, 0.5);
+}
+
+.clear:hover, .delete:hover {
+  background-color: rgba(255, 99, 71, 0.7);
+}
